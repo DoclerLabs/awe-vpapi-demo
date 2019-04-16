@@ -1,0 +1,147 @@
+.loader {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	min-height: 100px;
+}
+
+.loader-animation {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	border: 6px solid #333;
+	border-left-color: transparent;
+	animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+	from {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	to {
+		transform: translate(-50%, -50%) rotate(359deg);
+	}
+}
+
+.no-videos-found {
+	width: 100%;
+	margin-top: 30vh;
+	text-align: center;
+	line-height: 1.4rem;
+	cursor: pointer;
+}
+
+.video-list-wrapper {
+	margin: 40px 0;
+}
+
+.video-list-wrapper h2 {
+	margin-left: 5px;
+}
+
+.video-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.video-list--featured {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 1rem;
+}
+
+.video-list-item {
+	display: inline-block;
+	vertical-align: top;
+	width: calc(20% - 10px);
+	margin: 5px;
+	overflow: hidden;
+}
+
+.video-list .video-preview {
+	position: relative;
+	width: 100%;
+	height: 80%;
+	/* make the images 16:9 aspect ratio */
+	padding: 0 0 calc(9 / 16 * 100%) 0;
+	margin: 0;
+	overflow: hidden;
+	list-style: none;
+
+	background-image: url('../assets/logo.svg');
+	background-size: 50%;
+	background-position: center;
+	background-color: #002e3f;
+	background-repeat: no-repeat;
+}
+
+.video-list .video-preview-item {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.video-list .video-preview-item.visible {
+	opacity: 1;
+}
+
+.video-list-item .title {
+	margin-top: 15px;
+	color: #7dba27;
+}
+
+.pagination-container {
+	width: 100%;
+	margin: 10px 0;
+	text-align: center;
+	user-select: none;
+}
+
+.pagination-container ul {
+	display: inline-block;
+}
+
+.pagination-container li {
+	display: inline-block;
+	padding: 16px 20px;
+	margin: 0 5px;
+	border-radius: 3px;
+	font-size: 1.8rem;
+	line-height: 1;
+	background: #002e3f;
+	color: #fff;
+	cursor: pointer;
+}
+
+.pagination-container li.current-page {
+	background: #7dba27;
+}
+
+.pagination-left-arrow,
+.pagination-right-arrow {
+	display: inline-block;
+	vertical-align: top;
+	width: 16px;
+	height: 15px;
+	margin-top: 1px;
+}
+
+.pagination-left-arrow {
+	margin-right: 5px;
+}
+
+.pagination-right-arrow {
+	margin-left: 5px;
+}

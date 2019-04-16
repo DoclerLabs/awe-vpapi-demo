@@ -1,0 +1,113 @@
+.video-content-wrapper {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.video-content {
+	display: inline-block;
+	vertical-align: top;
+	width: calc(100% - 310px);
+	margin-right: 10px;
+}
+
+.video-sidebar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 300px;
+	font-size: 0;
+	overflow: hidden;
+}
+
+.video-sidebar::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 200px;
+	z-index: 1;
+	pointer-events: none;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #00151c 60%);
+}
+
+.video-sidebar .title {
+	font-size: 1.4rem;
+}
+
+.video-sidebar .video-list-item {
+	width: calc(50% - 3px);
+	margin: 6px 6px 0 0;
+}
+
+.video-sidebar .video-list-item:nth-child(even) {
+	margin-right: 0;
+}
+
+.video-sidebar .video-list-wrapper {
+	margin: 0;
+}
+
+.video-sidebar-more-button {
+	box-sizing: border-box;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 50px;
+	outline: 0;
+	border: 0;
+	border-radius: 5px;
+	font-size: 1.8rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	z-index: 2;
+	background: #7dba26;
+	color: #fff;
+}
+
+.video-player-frame-aspect-ratio-wrapper {
+	position: relative;
+	width: 100%;
+	/* make the video frame exactly 16:9 aspect ratio */
+	padding-top: calc(9 / 16 * 100%);
+}
+
+.video-player-frame-aspect-ratio-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.video-details {
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	padding: 20px 2%;
+	background: #002e3f;
+}
+
+.video-details p {
+	margin: 10px 0 0;
+}
+
+.video-details-heading {
+	margin-top: 0;
+	text-transform: uppercase;
+}
+
+.video-details-icon {
+	margin-right: 5px;
+	margin-top: -3px;
+	height: 17px;
+}
+
+.video-details-icon,
+.video-details-meta-category {
+	display: inline-block;
+	vertical-align: middle;
+}

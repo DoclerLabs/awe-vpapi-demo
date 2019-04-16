@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!--
+	This changes the base path for the whole app, including CSS links, scripts and routing.
+	Change this to `/` if the demo should be served with no base route.
+	See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+	-->
+	<base href="/">
+
+	<meta charset="utf-8">
+	<title>AWE Video Promotion API Demo</title>
+
+	<link href="normalize.css" rel="stylesheet" type="text/css">
+	<link href="app.css" rel="stylesheet" type="text/css">
+	<link href="routes/index.css" rel="stylesheet" type="text/css">
+	<link href="routes/details.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:400,500" rel="stylesheet">
+
+	<link rel="shortcut icon" href="assets/favicon.ico">
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+			integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+			crossorigin="anonymous">
+	</script>
+</head>
+
+<body>
+	<header class="main-menu-bar">
+		<div class="header-content">
+			<a class="logo" href="" title="AWE Video Promotion API Demo">
+				<img src="assets/logo.svg" />
+			</a>
+
+			<div class="search-field-input-container">
+				<img src="assets/search.svg" class="search-field-icon"/>
+				<input type="text" class="search-field-input" placeholder="Search free videos ...">
+				<div class="search-field-button">Search</div>
+				<ul class="suggestions"></ul>
+			</div>
+			<nav class="menu-links">
+				<a>Home</a>
+				<a class="active">Tags</a>
+				<a>Menu 3</a>
+				<a>Menu 4</a>
+			</nav>
+		</div>
+	</header>
+
+	<div class="site-content-wrapper">
+		<section class="site-content"></section>
+
+		<footer class="footer">
+			<div class="footer-content">
+				<div class="footer-logos">
+					<a href="http://www.rtalabel.org/">
+						<img src="assets/rta-logo.svg" />
+					</a>
+					<a href="http://www.fosi.org/icra/">
+						<img src="assets/icra-logo.svg" />
+					</a>
+					<a href="http://www.asacp.org/">
+						<img src="assets/asacp-logo.svg" />
+					</a>
+				</div>
+				<p>&copy; 2019 Awempire.com - All rights reserved.</p>
+			</div>
+		</footer>
+	</div>
+
+
+	<!-- -------------------------------------------------- -->
+	<!--                Site Scripts                        -->
+	<!-- -------------------------------------------------- -->
+
+	<!--                   Polyfills                       -->
+
+	<script src="polyfill/promise.js"></script>
+	<script src="polyfill/url.js"></script>
+	<script src="polyfill/fetch.js"></script>
+
+	<!--                   Libraries                       -->
+	<script src="vpapi.js"></script>
+	<script src="utils.js"></script>
+	<script src="ui.js"></script>
+	<script src="menu.js"></script>
+	<script src="router.js"></script>
+	<script src="Component.js"></script>
+
+	<!--                   Components                       -->
+	<script src="components/pagination.js"></script>
+	<script src="components/videoThumb.js"></script>
+	<script src="components/videoList.js"></script>
+
+	<!--                   Routes                           -->
+	<script src="routes/tag.js"></script>
+	<script src="routes/details.js"></script>
+	<script src="routes/index.js"></script>
+
+	<!--                   App                              -->
+	<script src="app.js"></script>
+</body>
+
+</html>
